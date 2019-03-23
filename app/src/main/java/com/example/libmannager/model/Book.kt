@@ -4,7 +4,7 @@ import java.time.Year
 import java.util.Date
 
 class Book(private val name: String, private val edition : String, private val pubCompany : String,
-           private val author : String, private val year : Year){
+           private val author : String, private val year : String){
 
     fun getName() : String{
         return name
@@ -22,7 +22,7 @@ class Book(private val name: String, private val edition : String, private val p
         return author
     }
 
-    fun getPubYear() : Year {
+    fun getPubYear() : String {
         return year
     }
 }

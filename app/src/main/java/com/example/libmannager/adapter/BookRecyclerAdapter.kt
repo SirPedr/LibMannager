@@ -28,7 +28,7 @@ class BookRecyclerAdapter(private val context: Context, private val books : List
         holder.bookEdition.text = book.getEdition()
         holder.bookPub.text = book.getPublishingCompany()
         holder.bookAuthor.text = book.getAuthor()
-        holder.bookYear.text = book.getPubYear().toString()
+        holder.bookYear.text = book.getPubYear()
 
     }
 
