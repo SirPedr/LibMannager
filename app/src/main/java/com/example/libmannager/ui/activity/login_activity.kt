@@ -13,17 +13,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.book_recycler_list)
+        setContentView(R.layout.activity_login)
 
-        val recycler_book_view  = findViewById<RecyclerView>(R.id.book_recycler)
-        val bookList = ArrayList<Book>()
-
-        for(i in 1..1000){
-            bookList.add(Book("Senhor dos Anéis", "1ed", "HarperCollins", "J.R.R. Tolkien",
-                    "1954"))
-        }
-
-        recycler_book_view.adapter = BookRecyclerAdapter(this, bookList)
-        recycler_book_view.layoutManager = LinearLayoutManager(this)
     }
 }
