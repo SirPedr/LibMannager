@@ -1,0 +1,12 @@
+package dataaccess.webservice
+
+import retrofit2.http.GET
+
+/*Serve para listar os métodos que darão acesso às informações do WS.
+* O método 'getBookList()', por exemplo, retorna uma lista com todos os livros armazenados.
+* Se eu quisesse expandir, talvez poderia criar um método 'getBookByName()' que receberia o nome de um livro como
+* parâmetro e retornasse seus dados!*/
+interface BookService {
+    @GET()
+    fun getBookList()
+}
