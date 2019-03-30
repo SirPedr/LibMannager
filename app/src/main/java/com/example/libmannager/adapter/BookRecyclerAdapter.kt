@@ -6,11 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.libmannager.R
-import com.example.libmannager.model.Book
+import com.example.libmannager.entity.Book
 import kotlinx.android.synthetic.main.book_card.view.*
-import java.text.FieldPosition
 
-class BookRecyclerAdapter(private val context: Context, private val books : List<Book>) :
+class BookRecyclerAdapter(private val context: Context, private val books : ArrayList<Book>) :
     RecyclerView.Adapter<BookRecyclerAdapter.BookHolder>() {
 
     override fun onCreateViewHolder(viewGroup : ViewGroup, p1: Int): BookHolder {
@@ -24,11 +23,11 @@ class BookRecyclerAdapter(private val context: Context, private val books : List
     override fun onBindViewHolder(holder : BookHolder, position : Int) {
         val book = books[position]
 
-        holder.bookTitle.text = book.getName()
-        holder.bookEdition.text = book.getEdition()
-        holder.bookPub.text = book.getPublishingCompany()
-        holder.bookAuthor.text = book.getAuthor()
-        holder.bookYear.text = book.getPubYear()
+        holder.bookTitle.text = book.nome
+        holder.bookEdition.text = book.edicao
+        holder.bookPub.text = book.editora
+        holder.bookAuthor.text = book.autor
+        holder.bookYear.text =  Integer.toString(book.ano)
 
     }
 
