@@ -1,5 +1,7 @@
 package dataaccess.webservice
 
+import com.example.libmannager.model.Book
+import retrofit2.Call
 import retrofit2.http.GET
 
 /*Serve para listar os métodos que darão acesso às informações do WS.
@@ -8,5 +10,5 @@ import retrofit2.http.GET
 * parâmetro e retornasse seus dados!*/
 interface BookService {
     @GET()
-    fun getBookList()
+    fun getBookList(): Call<List<Book>>
 }
