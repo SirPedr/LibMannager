@@ -1,6 +1,6 @@
 package dataaccess.webservice
 
-import com.example.libmannager.model.Book
+import com.example.libmannager.entity.Book
 import retrofit2.Call
 import retrofit2.http.GET
 
@@ -9,6 +9,6 @@ import retrofit2.http.GET
 * Se eu quisesse expandir, talvez poderia criar um método 'getBookByName()' que receberia o nome de um livro como
 * parâmetro e retornasse seus dados!*/
 interface BookService {
-    @GET()
-    fun getBookList(): Call<List<Book>>
+    @GET("livros")
+    fun getBookList(): Call<ArrayList<Book>>
 }
